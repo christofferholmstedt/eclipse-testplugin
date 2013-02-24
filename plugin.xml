@@ -4,7 +4,7 @@
    <extension
          point="org.eclipse.ui.commands">
       <command
-            id="se.chho.se.eclipse.testplugin.generatetostring"
+            id="se.chho.eclipse.testplugin.generatetostring"
             name="Generate Custom toString">
       </command>
       <command
@@ -22,7 +22,7 @@
                visible="true">
          </separator>
          <command
-               commandId="se.chho.se.eclipse.testplugin.generatetostring"
+               commandId="se.chho.eclipse.testplugin.generatetostring"
                label="Generate CHHO toString"
                style="push">
          </command>
@@ -36,6 +36,17 @@
                visible="true">
          </separator>
       </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="se.chho.eclipse.testplugin.generatetostring.GenerateToStringHandler"
+            commandId="se.chho.eclipse.testplugin.generatetostring">
+      </handler>
+      <handler
+            class="se.chho.eclipse.testplugin.checknonnullparameter.CheckNonNullParameterHandler"
+            commandId="se.chho.eclipse.testplugin.checknonnullparameter">
+      </handler>
    </extension>
 
 
