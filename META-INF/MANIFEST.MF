@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Testplugin
-Bundle-SymbolicName: se.chho.eclipse.testplugin; singleton:=true
+Bundle-SymbolicName: se.chho.eclipse.testplugin;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-Activator: se.chho.eclipse.testplugin.Activator
 Require-Bundle: org.eclipse.ui,

@@ -1,6 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?eclipse version="3.4"?>
 <plugin>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            id="se.chho.se.eclipse.testplugin.generatetostring"
+            name="Generate Custom toString">
+      </command>
+      <command
+            id="se.chho.eclipse.testplugin.checknonnullparameter"
+            name="Check Non-null parameter">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="true"
+            locationURI="popup:org.eclipse.jdt.ui.source.menu?after=CleanUp">
+         <separator
+               name="Seperator.separator1"
+               visible="true">
+         </separator>
+         <command
+               commandId="se.chho.se.eclipse.testplugin.generatetostring"
+               label="Generate CHHO toString"
+               style="push">
+         </command>
+         <command
+               commandId="se.chho.eclipse.testplugin.checknonnullparameter"
+               label="Check NON-NULL Parameters"
+               style="push">
+         </command>
+         <separator
+               name="Seperator.separator2"
+               visible="true">
+         </separator>
+      </menuContribution>
+   </extension>
 
 
 </plugin>
