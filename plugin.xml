@@ -11,6 +11,16 @@
             id="se.chho.eclipse.testplugin.checknonnullparameter"
             name="Check Non-null parameter">
       </command>
+      <command 
+      	defaultHandler="se.chho.eclipse.testplugin.commands.AddBuilder" 
+      	id="se.chho.eclipse.testplugin.addBuilder" 
+      	name="Add Custom Builder">  
+    </command>  
+    <command 
+    	defaultHandler="se.chho.eclipse.testplugin.commands.RemoveBuilder" 
+    	id="se.chho.eclipse.testplugin.removeBuilder" 
+    	name="Remove Custom Builder">  
+    </command> 
    </extension>
    <extension
          point="org.eclipse.ui.menus">
@@ -36,6 +46,17 @@
                visible="true">
          </separator>
       </menuContribution>
+      <menuContribution allPopups="false" 
+      			locationURI="popup:org.eclipse.ui.projectConfigure?after=additions">  
+        <command 
+        	commandId="se.chho.eclipse.testplugin.addBuilder"
+        	style="push">  
+        </command>  
+        <command 
+        	commandId="se.chho.eclipse.testplugin.removeBuilder"
+        	style="push">  
+        </command>  
+    </menuContribution>  
    </extension>
    <extension
          point="org.eclipse.ui.handlers">
@@ -74,5 +95,15 @@
 			  </or>
 			</enabledWhen>
       </handler>
+   </extension>
+   <extension
+         id="se.chho.eclipse.testplugin.builders.MyBuilder"
+         name="Testplugin MyBuilder"
+         point="org.eclipse.core.resources.builders">
+      <builder>
+         <run
+               class="se.chho.eclipse.testplugin.MyBuilder">
+         </run>
+      </builder>
    </extension>
 </plugin>
