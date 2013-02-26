@@ -6,7 +6,6 @@ import java.util.List;
   
 import org.eclipse.core.commands.AbstractHandler;  
 import org.eclipse.core.commands.ExecutionEvent;  
-import org.eclipse.core.commands.IHandler;  
 import org.eclipse.core.resources.ICommand;  
 import org.eclipse.core.resources.IProject;  
 import org.eclipse.core.resources.IProjectDescription;  
@@ -18,7 +17,7 @@ import org.eclipse.ui.handlers.HandlerUtil;
   
 import se.chho.eclipse.testplugin.builders.MyBuilder;  
   
-public class AddBuilder extends AbstractHandler implements IHandler {  
+public class AddBuilder extends AbstractHandler {  
   
  @Override  
  public Object execute(final ExecutionEvent event) {  
